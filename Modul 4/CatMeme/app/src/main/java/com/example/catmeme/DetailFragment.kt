@@ -11,8 +11,6 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
     private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
 
-    // 2. Deklarasikan ViewModel di level kelas menggunakan delegasi ini
-    // Ini akan membagikan ViewModel yang sama dengan Activity induknya
     private val viewModel: CatViewModel by activityViewModels {
         CatViewModelFactory("Car") // Isi parameter string sesuai kebutuhanmu
     }
@@ -23,9 +21,6 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
 
         val catId = arguments?.getInt("catId") ?: return
 
-        // 3. Hapus baris val viewModel = ViewModelProvider... yang lama
-
-        // 4. Langsung gunakan viewModel yang sudah dideklarasikan di atas
         val cat = viewModel.catList.value.find { it.id == catId }
 
         if (cat != null) {

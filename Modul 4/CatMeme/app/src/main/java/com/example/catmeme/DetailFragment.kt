@@ -12,7 +12,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
     private val binding get() = _binding!!
 
     private val viewModel: CatViewModel by activityViewModels {
-        CatViewModelFactory("Car") // Isi parameter string sesuai kebutuhanmu
+        CatViewModelFactory("Car") 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

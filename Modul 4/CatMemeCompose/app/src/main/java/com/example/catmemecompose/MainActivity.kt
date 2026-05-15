@@ -28,14 +28,13 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 
                     val navController = rememberNavController()
-                    // Menggunakan ViewModelFactory dengan parameter String
+                    
                     val viewModel: CatViewModel = viewModel(
                         factory = CatViewModel.Factory("Cat Memes")
                     )
 
                     val uiEvent by viewModel.uiEvent.collectAsState()
 
-                    // Menangani event dari ViewModel menggunakan StateFlow
                     LaunchedEffect(uiEvent) {
                         when (val event = uiEvent) {
                             is CatUiEvent.NavigateToDetail -> {

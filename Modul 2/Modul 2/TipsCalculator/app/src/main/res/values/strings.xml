@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TipsCalculator</string>
+    <string name="title_calculate_tip">Calculate Tip</string>
+    <string name="hint_bill_amount">Bill Amount</string>
+    <string name="label_tip_percentage">Tip Percentage</string>
+    <string name="label_round_up">Round up tip?</string>
+    <string name="result_tip_amount">Tip Amount: $0.00</string>
+    <string name="calculate_tip">Calculate Tip</string>
+    <string name="bill_amount">Bill Amount</string>
+    <string name="tip_percentage">Tip Percentage</string>
+    <string name="round_up_tip">Round up tip?</string>
+    <string name="tip_amount_0_00">Tip Amount: $0.00</string>
+</resources>
